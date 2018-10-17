@@ -21,4 +21,4 @@ where studentid not in(select studentid from exams)
 select s.name
 from students s join exams ex on(s.studentid=ex.studentid)
 group by s.name
-having min(mark)>2
+having min(mark)>2 and count(mark)=count(subjectid) from (select subjectid from subjects)
