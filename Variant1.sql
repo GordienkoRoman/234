@@ -16,7 +16,7 @@ where count(ex.mark)>10
 5.
 select studentid
 from students
-where studentid not in(select subjectid from exams)
+where studentid not in(select studentid from exams)
 6.
 select s.name
 from students s join exams ex on(s.studentid=ex.studentid)
